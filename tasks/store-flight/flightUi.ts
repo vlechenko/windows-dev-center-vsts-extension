@@ -39,6 +39,7 @@ function gatherParams()
         authentication: credentials,
         endpoint: endpointUrl,
         force: tl.getBoolInput('force', true),
+        deleteCurrentPackages: tl.getBoolInput('deleteCurrentPackages', true),
         zipFilePath: path.join(tl.getVariable('Agent.WorkFolder'), 'temp.zip'),
         packages: [],
         waiting: tl.getBoolInput('waiting', true)

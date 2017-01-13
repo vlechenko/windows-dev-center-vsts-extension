@@ -251,6 +251,7 @@ function putMetadata(submissionResource: any): Q.Promise<void>
         submissionResource.applicationPackages.forEach(item => 
         {
             item.fileStatus = 'PendingDelete';
+            console.log("Mark package "+item.fileName + " as deleted.");
         });
     }
 

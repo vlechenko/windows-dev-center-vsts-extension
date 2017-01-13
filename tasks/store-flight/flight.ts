@@ -194,6 +194,7 @@ function putFlightSubmission(flightSubmissionResource: any): Q.Promise<void>
         flightSubmissionResource.flightPackages.forEach(item => 
         {
             item.fileStatus = 'PendingDelete';
+            console.log("Mark package "+item.fileName + " as deleted.");
         });
     }
     api.includePackagesInSubmission(taskParams.packages, flightSubmissionResource.flightPackages);
